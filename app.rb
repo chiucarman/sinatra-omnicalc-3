@@ -9,7 +9,7 @@ get("/") do
 end
 
 get("/umbrella") do
-  erb(:umbrella)
+  erb(:umbrella_form)
 end
 
 get("/process_umbrella") do
