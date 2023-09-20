@@ -8,6 +8,7 @@ get("/") do
   <h1>Welcome to your Sinatra App!</h1>
   <p>Define some routes in app.rb</p>
   "
+  # cookies["color"] = "purple"
 end
 
 get("/umbrella") do
@@ -31,6 +32,10 @@ post("/process_umbrella") do
 
   @latitude = @loc_hash.fetch("lat")
   @longitude = @loc_hash.fetch("lng")
+
+  # cookies["last_location"] = @user_location
+  # cookies["last_lat"] = @latitude
+  # cookies["last_lng"] = @longitude
 
   erb(:umbrella_results)
 end
