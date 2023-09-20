@@ -11,3 +11,9 @@ end
 get("/umbrella") do
   erb(:umbrella)
 end
+
+get("/process_umbrella") do
+  @user_location = params.fetch("user_loc")
+
+  erb(:umbrella_results)
+end
