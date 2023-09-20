@@ -9,5 +9,5 @@ get("/") do
 end
 
 get("/umbrella") do
-  "howdy"
+  erb(:umbrella)
 end
