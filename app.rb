@@ -1,6 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "http"
+require "sinatra/cookies"
 
 get("/") do
   "
