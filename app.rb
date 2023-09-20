@@ -24,5 +24,8 @@ get("/process_umbrella") do
 
   @loc_hash = @parsed_response.dig("results", 0, "geometry", "location")
 
+  @latitude = @loc_hash.fetch("lat")
+  @longitude = @loc_hash.fetch("lng")
+
   erb(:umbrella_results)
 end
