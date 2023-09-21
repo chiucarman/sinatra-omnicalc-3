@@ -63,3 +63,11 @@ post("/process_umbrella") do
 
   erb(:umbrella_results)
 end
+
+get("/message") do
+  erb(:message_form)
+end
+
+post("/process_single_message") do
+  erb(:single_message_results)
+end
