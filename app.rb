@@ -69,5 +69,13 @@ get("/message") do
 end
 
 post("/process_single_message") do
+  @message = params.fetch("the_message")
+  
+  @GPT4_response
+
   erb(:single_message_results)
+end
+
+get("/chat") do
+  erb(:chat_form)
 end
