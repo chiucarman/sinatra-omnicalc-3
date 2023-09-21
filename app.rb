@@ -79,3 +79,11 @@ end
 get("/chat") do
   erb(:chat_form)
 end
+
+post("/add_message_to_chat") do
+  
+end
+
+post("/clear_chat") do
+
+end
