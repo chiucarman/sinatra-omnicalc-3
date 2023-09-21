@@ -50,6 +50,15 @@ post("/process_umbrella") do
 
   @temp_hash = @parsed_weather_response.dig("currently", "temperature")
 
+  @summary_hash = @parsed_weather_response.dig("currently", "summary")
+
+  @precipitation = @parsed_weather_response.dig("currently", "precipProbability")
+
+  if @precipitation > 0
+    @umbrella = "You might need an umbrella."
+  else
+    @umbrella = "You probably won't need an umbrella."
+  end
 
   # cookies["last_location"] = @user_location
   # cookies["last_lat"] = @latitude
